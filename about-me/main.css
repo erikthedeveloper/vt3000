@@ -1,0 +1,209 @@
+@import 'import.css';
+/*
+Colors
+    Draught       : F0EBD8
+    Kahtan        : C3DAC6
+    Pixel Flesh   : D6A465
+    Butternut Brun: CFB875
+    Jealous Shaman: D67435
+    Grand Canal   : 69897C
+ */
+
+/*============================
+=            Tags            =
+============================*/
+
+html{
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding:0;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    background-color: #F0EBD8;
+    /*background-color: #000;*/
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    overflow: hidden;
+}
+
+h1 {
+    background-color: rgba(255,255,255,0.4);
+    padding: 40px;
+    font-size: 6em;
+    color: #26272D;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.h1-tagline {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2em;
+    text-shadow: #000 2px 1px 2px;
+}
+h2{
+    text-align: center;
+    font-size: 3em;
+}
+h3{
+    text-align: center;
+    padding-top: 40px;
+}
+h4{
+    text-align: center;
+}
+h5{}
+
+
+/*===========================================
+=            Homepage "Sections"            =
+===========================================*/
+
+
+.section {
+    min-height: 600px;
+    margin:0;
+    padding: 25px 100px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.95;
+    transition:opacity 0.3s;
+}
+.section:hover {
+    opacity: 1;
+}
+
+.section-intro{
+    background-color: #fff;
+}
+
+.section-intro img {
+    min-height: 100%;
+    min-width:  100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+.img-blur {
+    -webkit-filter: blur(5px);
+    transition: all 0.8s;
+}
+.section-intro:hover .img-blur {
+    opacity: 0;
+}
+
+.section-bio{
+    background-color: #252525;
+    color: #BBBBBB;
+}
+.section-skills{
+    /*background-color: #CFB875;*/
+}
+
+.skill-circle {
+    position: relative;
+}
+
+.skill-logo {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  max-width: 80px;
+  height: auto;
+  max-height: 80px;
+}
+
+.legend div{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.section-fact{
+    /*background-color: #D67435;*/
+}
+.section-links{
+    /*background-color: #fff;*/
+    min-height: 0;
+}
+.social-round {
+    background-color: #fff;
+    border-radius: 500px;
+    height: 300px;
+    width: 300px;
+    opacity: 0.7;
+    transition: opacity 500ms;
+    position:relative;
+    margin: 0 auto;
+}
+.social-round img {
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+.social-round:hover {
+    opacity: 1;
+}
+
+
+/*=======================================
+=            Utility Classes            =
+=======================================*/
+
+/**
+ * Text
+ */
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+.text-small {
+    font-size: 75%;
+}
+.text-large {
+    font-size: 250%;
+    line-height: 1.25em;
+}
+
+.text-light {
+    font-weight: lighter;
+}
+
+/**
+ * Position
+ */
+ .absolute {position: absolute;}
+
+.center-horizontal, .chart-canvas {
+    margin-left: auto; margin-right: auto;
+    display: block;
+}
+
+.center-vertical {
+
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+/**
+ * Misc
+ */
+.rounded {
+    border-radius: 500px;
+}
