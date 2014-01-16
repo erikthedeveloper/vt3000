@@ -9,30 +9,55 @@ Colors
     Grand Canal   : 69897C
  */
 
+/*==========================================================================
+=            Required Selectors for VT3000 Selectors Assignment            =
+==========================================================================*/
+
+/*
+.class
+#id
+*
+element,element
+element element
+element>element
+element+element
+[attribute=value]
+:before
+:after
+:hover
+:first-of-type
+:nth-of-type()
+:only-child
+:nth-child
+
+:last-child
+:not
+*/
+
+
+html, body {
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
 /*============================
 =            Tags            =
 ============================*/
 
 html{
-    height: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    padding:0;
-    margin: 0;
 }
 
-body{
-    height: 100%;
+body {
     background-color: #F0EBD8;
-    /*background-color: #000;*/
-    padding: 0;
-    margin: 0;
 }
 
 div {
     overflow: hidden;
 }
 
-h1 {
+div > h1 {
     background-color: rgba(255,255,255,0.4);
     padding: 40px;
     font-size: 6em;
@@ -40,13 +65,14 @@ h1 {
     font-weight: 700;
     margin-bottom: 0;
 }
-.h1-tagline {
+.h1-tagline:before {
     color: #fff;
     font-weight: 300;
     font-size: 2em;
     text-shadow: #000 2px 1px 2px;
+    content: attr(data-test);
 }
-h2{
+html h2{
     text-align: center;
     font-size: 3em;
 }
@@ -57,6 +83,13 @@ h3{
 h4{
     text-align: center;
 }
+h4:first-of-type{
+    text-decoration: underline;
+}
+.col-4:nth-of-type(2n+1) h4{
+    text-decoration: none;
+}
+
 h5{}
 
 
@@ -74,15 +107,15 @@ h5{}
     opacity: 0.95;
     transition:opacity 0.3s;
 }
-.section:hover {
+section:not(#section_intro):hover {
     opacity: 1;
 }
 
-.section-intro{
+#section_intro{ /*Converted to ID for assignment*/
     background-color: #fff;
 }
 
-.section-intro img {
+#section_intro img {
     min-height: 100%;
     min-width:  100%;
     position: absolute;
@@ -92,7 +125,7 @@ h5{}
     -webkit-filter: blur(5px);
     transition: all 0.8s;
 }
-.section-intro:hover .img-blur {
+#section_intro:hover .img-blur {
     opacity: 0;
 }
 
@@ -100,8 +133,19 @@ h5{}
     background-color: #252525;
     color: #BBBBBB;
 }
+.section.section-bio p:last-child {
+    font-style: italic;
+}
 .section-skills{
     /*background-color: #CFB875;*/
+}
+.section-skills h2:after{
+    height: 10px;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background-color: #252525;
+    content: "";
 }
 
 .skill-circle {
@@ -117,7 +161,7 @@ h5{}
   max-height: 80px;
 }
 
-.legend div{
+h2+.legend div{
     width: 50%;
     float: left;
     text-align: center;
@@ -127,12 +171,20 @@ h5{}
 .section-fact{
     /*background-color: #D67435;*/
 }
-.section-links{
-    /*background-color: #fff;*/
+.section-fact em:only-child{
+    color: #fff;
+    font-weight: 700;
+}
+/*.section-links{*/
+[title=social_this]{
+    background-color: #252525;
     min-height: 0;
 }
+[title=social_this] h2{
+    color: #fff;
+}
 .social-round {
-    background-color: #fff;
+    background-color: #c2c2c2;
     border-radius: 500px;
     height: 300px;
     width: 300px;
@@ -141,7 +193,11 @@ h5{}
     position:relative;
     margin: 0 auto;
 }
-.social-round img {
+.section-links .col-4:nth-child(2n+1) .social-round {
+    background-color: #fff;
+}
+/*.social-round img {*/
+.social-round * {
     max-width: 50%;
     height: auto;
     margin: auto;
@@ -206,4 +262,13 @@ h5{}
  */
 .rounded {
     border-radius: 500px;
+}
+
+/*================================
+=            Grid-ish            =
+================================*/
+
+.col-4 {
+    width: 33.33333%;
+    float: left;
 }
