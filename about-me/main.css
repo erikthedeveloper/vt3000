@@ -1,6 +1,9 @@
-@import 'import.css';
+/*========================================================================
+=      Erik Aybar - VT300 Assignment - DSU - About Me (CSS Selectors)   =
+========================================================================*/
+
 /*
-Colors
+Colors (May be used... maybe not)
     Draught       : F0EBD8
     Kahtan        : C3DAC6
     Pixel Flesh   : D6A465
@@ -29,7 +32,6 @@ element+element
 :nth-of-type()
 :only-child
 :nth-child
-
 :last-child
 :not
 */
@@ -79,6 +81,7 @@ html h2{
 h3{
     text-align: center;
     padding-top: 40px;
+    clear: both;
 }
 h4{
     text-align: center;
@@ -113,6 +116,9 @@ section:not(#section_intro):hover {
 
 #section_intro{ /*Converted to ID for assignment*/
     background-color: #fff;
+}
+#section_intro div {
+    padding-top:150px; position:relative;
 }
 
 #section_intro img {
@@ -160,16 +166,20 @@ section:not(#section_intro):hover {
   height: auto;
   max-height: 80px;
 }
+#mongo_logo {
+    background: #402817; padding: 8px; border-radius: 3px;
+}
 
 h2+.legend div{
     width: 50%;
     float: left;
     text-align: center;
     padding: 10px 0;
+    background-color:#4FC2C5; width:100%; margin:0 auto;
 }
 
 .section-fact{
-    /*background-color: #D67435;*/
+    background-color: #4FC2C5; min-height: 0;
 }
 .section-fact em:only-child{
     color: #fff;
