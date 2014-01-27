@@ -10,7 +10,7 @@
 
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/vendor/prism.js"></script>
-        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+        <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
         <script src="js/main.js"></script>
 
         <script>
